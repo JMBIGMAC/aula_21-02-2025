@@ -19,20 +19,13 @@
         
         <button type="button" onclick="calcularMedia()">Calcular Média</button>
     </form>
-    
     <h2 id="resultado"></h2>
-
     <script>
         function calcularMedia() {
-            // Captura os valores das notas
             const nota1 = parseFloat(document.getElementById('nota1').value);
             const nota2 = parseFloat(document.getElementById('nota2').value);
             const nota3 = parseFloat(document.getElementById('nota3').value);
-            
-            // Calcula a média
             const media = (nota1 + nota2 + nota3) / 3;
-            
-            // Exibe a situação acadêmica
             let resultado;
             if (media >= 7) {
                 resultado = "Aprovado";
@@ -41,8 +34,6 @@
             } else {
                 resultado = "Reprovado";
             }
-            
-            // Mostra o resultado na página
             document.getElementById('resultado').innerText = `Média: ${media.toFixed(2)} - ${resultado}`;
         }
     </script>
